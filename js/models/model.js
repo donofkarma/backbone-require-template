@@ -1,5 +1,5 @@
 /**
-* Backbone.js/Require.js Template
+* Backbone.js/RequireJS Template
 *
 * @info		Model template
 * @version	0.1
@@ -26,6 +26,8 @@ define([
 						title: this.defaults.title
 					});
 				}
+
+				console.log('model running...');
 			}
 		});
 

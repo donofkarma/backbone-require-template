@@ -1,5 +1,5 @@
 /**
-* Backbone.js/Require.js Template
+* Backbone.js/RequireJS Template
 *
 * @info		Main App view module template
 * @version	0.1
@@ -30,6 +30,8 @@ define([
 
 				// init a view
 				Views = new View();
+
+				console.log('app-view running...');
 			},
 
 			// render

@@ -1,5 +1,5 @@
 /**
-* Backbone.js/Require.js Template
+* Backbone.js/RequireJS Template
 *
 * @info		Template for creating new mobules
 * @version	0.1
@@ -12,6 +12,8 @@ define([
 	'jQuery', // libs/jquery/jquery
 	'Underscore', // libs/underscore/underscore
 	'Backbone' // libs/backbone/backbone
+
+	// additional module dependencies
 ], function($, _, Backbone) {
 	/*
 		Above we have passed in jQuery, Underscore and Backbone

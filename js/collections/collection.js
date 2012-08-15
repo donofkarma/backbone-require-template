@@ -1,5 +1,5 @@
 /**
-* Backbone.js/Require.js Template
+* Backbone.js/RequireJS Template
 *
 * @info		Collection template
 * @version	0.1
@@ -10,13 +10,14 @@
 define([
 	// these are path alias that we configured in our bootstrap
 	'Underscore', // libs/underscore/underscore
-	'Backbone' // libs/backbone/backbone
+	'Backbone', // libs/backbone/backbone
 
 	// additional module dependencies
-], function(_, Backbone) {
+	'models/model' // Model
+], function(_, Backbone, Model) {
 	var collection = Backbone.Collection.extend({
 			// model to use for the collection
-			model: model
+			model: Model
 		});
 
 	// what we return here will be used by other modules

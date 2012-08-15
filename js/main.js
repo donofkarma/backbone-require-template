@@ -1,13 +1,13 @@
 /**
-* Backbone.js/Require.js Template
+* Backbone.js/RequireJS Template
 *
 * @info		Initialises the app
 * @version	0.1
 * @author	Jasal Vadgama - http://blacklabelcreative.com/
-* @require	jquery 1.7.2
+* @require	jQuery 1.7.2
 			underscore 1.3.3
 			backbone.js 0.92
-			require.js 2.02
+			requireJS 2.02
 * @license	MIT
 **/
 
@@ -43,4 +43,6 @@ require([
 
 	// initialze the application view
 	App.initialize();
+
+	console.log('App initialized...');
 });
