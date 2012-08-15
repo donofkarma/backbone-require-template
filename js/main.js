@@ -42,5 +42,5 @@ require([
 	// the "app" dependency is passed in as "App"
 
 	// initialze the application view
-	var app = new App();
+	App.initialize();
 });

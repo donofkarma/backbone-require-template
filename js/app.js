@@ -1,7 +1,7 @@
 /**
 * Backbone.js/Require.js Template
 *
-* @info		Main App view module template
+* @info		App initialization module
 * @version	0.1
 * @author	Jasal Vadgama - http://blacklabelcreative.com/
 * @license	MIT
@@ -14,31 +14,15 @@ define([
 	'Backbone', // libs/backbone/backbone
 
 	// additional module dependencies
-	'views/view' // View
-], function($, _, Backbone, View) {
-	var AppView = Backbone.View.extend({
-			// set the taget element for the view
-			el: $('#notd'),
-
-			// bind any events
-			events: {
-			},
-
-			// init
-			initialize: function() {
-				var Views;
-
-				// init a view
-				Views = new View();
-			},
-
-			// render
-			render: function() {
-				// nothing to render for this view
-				// everything is handled by the child views
-			}
-		});
-
+	'views/app-view' // AppView
+], function($, _, Backbone, AppView) {
 	// what we return here will be used by other modules
-	return AppView;
+	return {
+		initialize: function() {
+			var App;
+
+			// init the main app view
+			App = new AppView();
+		}
+	};
 });
