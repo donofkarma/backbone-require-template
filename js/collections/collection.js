@@ -18,6 +18,15 @@ define([
 	var collection = Backbone.Collection.extend({
 			// model to use for the collection
 			model: Model
+
+			/*
+			// custom url for this collection
+			url: '/path/to/api'
+
+			// custom sync for this collection - overrides Backbone.sync
+			sync: function(method, model, options) {
+			}
+			*/
 		});
 
 	// what we return here will be used by other modules

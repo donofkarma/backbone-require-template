@@ -18,7 +18,7 @@ define([
 ], function($, _, Backbone, Collection) {
 	var View = Backbone.View.extend({
 			// set the taget element for the view
-			el: $('#app'),
+			el: $('#view'),
 
 			// bind any events
 			events: {
