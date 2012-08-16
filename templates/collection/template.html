@@ -1,5 +1,3 @@
-<div>
-	<label><%= title %></label>
-	<a class="destroy" href="#">Remove category</a>
-</div>
-<input class="edit" type="text" value="<%= title %>" />
+<% _.each(models, function(model){ %>
+	<li><%= model.get('title') %></li> 
+<% }); %>

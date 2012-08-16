@@ -36,8 +36,6 @@ define([
 
 			// render
 			render: function() {
-				// nothing to render for this view
-				// everything is handled by the child views
 			}
 		});
 

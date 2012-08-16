@@ -14,11 +14,17 @@ define([
 	'Backbone', // libs/backbone/backbone
 
 	// additional module dependencies
-	'collections/collection' // Collection
-], function($, _, Backbone, Collection) {
+	'collections/collection', // Collection
+
+	// module templates
+	'text!../../templates/collection/template.html' // Template
+], function($, _, Backbone, Collection, Template) {
 	var View = Backbone.View.extend({
 			// set the taget element for the view
 			el: $('#view'),
+
+			// template for the view - can also be reference directly in render()
+			template: Template,
 
 			// bind any events
 			events: {
@@ -26,13 +32,27 @@ define([
 
 			// init
 			initialize: function() {
+				// bind a events to collection changes
+				Collection.on('all', this.render, this);
+
+				// add an item to the collection
+				// replace with a .fetch() for the data
+				Collection.add({
+					title: '!!! test item !!!'
+				});
+
 				console.log('view running...');
 			},
 
 			// render
 			render: function() {
-				// nothing to render for this view
-				// everything is handled by the child views
+				var $el = $(this.el);
+
+				// apply the template to the models and show on the page
+				$el.html(_.template( this.template, { models: Collection.models } ));
+
+				// return to maintiain chainability
+				return this;
 			}
 		});
 
