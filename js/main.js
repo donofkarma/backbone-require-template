@@ -4,7 +4,7 @@
 * @info		Initialises the app
 * @version	0.1
 * @author	Jasal Vadgama - http://blacklabelcreative.com/
-* @require	jQuery 1.7.2
+* @require	jQuery 1.8.0
 			underscore 1.3.3
 			backbone.js 0.92
 			requireJS 2.02
@@ -15,7 +15,7 @@
 require.config({
 	paths: {
 		// paths to libraries
-		jQuery: 'libs/jquery/jquery.min',
+		jQuery: 'libs/jquery/jquery-1.8.0.min',
 		Underscore: 'libs/underscore/underscore.min',
 		Backbone: 'libs/backbone/backbone.min',
 		text: 'libs/require/text' // text plugin for templates
@@ -43,6 +43,4 @@ require([
 
 	// initialze the application view
 	App.initialize();
-
-	console.log('App initialized...');
 });

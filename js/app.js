@@ -29,8 +29,6 @@ define([
 
 			// init the main app view
 			App = new AppView();
-
-			console.log('App running...');
 		}
 	};
 });

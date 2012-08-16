@@ -14,7 +14,7 @@ Libraries
 
 This template uses (all included):
 - Backbone.js 0.9.2
-- jQuery v1.7.2
+- jQuery v1.8.0
 - RequireJS 2.0.2
 - RequireJS text 2.0.0
 - Underscore.js 1.3.3

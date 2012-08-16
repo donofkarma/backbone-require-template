@@ -30,8 +30,6 @@ define([
 
 				// init a view
 				Views = new View();
-
-				console.log('app-view running...');
 			},
 
 			// render

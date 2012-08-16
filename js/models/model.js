@@ -26,8 +26,6 @@ define([
 						title: this.defaults.title
 					});
 				}
-
-				console.log('model running...');
 			}
 		});
 

@@ -40,8 +40,6 @@ define([
 				Collection.add({
 					title: '!!! test item !!!'
 				});
-
-				console.log('view running...');
 			},
 
 			// render
