@@ -38,7 +38,16 @@ define([
 				// add an item to the collection
 				// replace with a .fetch() for the data
 				Collection.add({
-					title: '!!! test item !!!'
+					title: '!!! test item 1 !!!'
+				});
+				Collection.add({
+					title: '!!! test item 2 !!!'
+				});
+				Collection.add({
+					title: '!!! test item 3 !!!'
+				});
+				Collection.add({
+					title: '!!! test item 4 !!!'
 				});
 			},
 

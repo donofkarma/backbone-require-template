@@ -12,8 +12,9 @@ define([
 	'jQuery', // libs/jquery/jquery
 
 	// additional module dependencies
+	'router', // AppRouter
 	'views/app-view' // AppView
-], function($, AppView) {
+], function($, AppRouter, AppView) {
 	// set up the interactions for the app seprerate from backbone
 
 	// PRIVATE VARIABLES
@@ -25,7 +26,10 @@ define([
 	return {
 		initialize: function() {
 			// main app init
-			var App;
+			var Router, App;
+
+			// start the router
+			Router = new AppRouter();
 
 			// init the main app view
 			App = new AppView();

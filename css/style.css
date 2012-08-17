@@ -26,7 +26,11 @@ h2 {
 	font-size: 20px;
 	line-height: 1.2em;
 }
-p {
+h3 {
+	margin-bottom: 0.5em;
+}
+p,
+ul {
 	margin-bottom: 1em;
 }
 li {

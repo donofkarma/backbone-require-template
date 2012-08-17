@@ -29,6 +29,12 @@ To-do
 Changelog
 ---------------------
 
+### 0.2
+- Added a router
+- Added explanitory index.html
+- Added some basic styling
+- Added exmaple functionality
+
 ### 0.1
 - Added App.initialize() layer to init additional JS plugins outside of the Backbone framework (e.g. carousels and accordions)
 - Adding initial code

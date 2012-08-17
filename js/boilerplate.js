@@ -15,11 +15,8 @@ define([
 
 	// additional module dependencies
 ], function($, _, Backbone) {
-	/*
-		Above we have passed in jQuery, Underscore and Backbone
-		They will not be accessible in the global scope
-	*/
+	var Module = {};
 
 	// what we return here will be used by other modules
-	return {};
+	return Module;
 });
