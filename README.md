@@ -7,8 +7,6 @@ Initially this was created to help me learn how to put all of this together prop
 
 Feel free to fork/clone/use it if you want to.
 
-Note - this doesn't include a router so you will need to add your own.
-
 Libraries
 ---------------------
 
@@ -22,7 +20,6 @@ This template uses (all included):
 To-do
 ---------------------
 
-- Add a router
 - Template overview
 - Usage instructions
 

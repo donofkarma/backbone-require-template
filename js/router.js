@@ -18,9 +18,9 @@ define([
 	var AppRouter = Backbone.Router.extend({
 		routes: {
 			// define the URL routes (examples of each type)
-			"/backbone-require-template/posts/:id": "getPost", // http://example.com/#/posts/121
-			"/backbone-require-template/download/*path": "downloadFile", // http://example.com/#/download/user/images/hey.gif
-			"/backbone-require-template/:route/:action": "loadView" // http://example.com/#/dashboard/graph
+			"posts/:id": "getPost", // http://example.com/#/posts/121
+			"download/*path": "downloadFile", // http://example.com/#/download/user/images/hey.gif
+			":route/:action": "loadView" // http://example.com/#/dashboard/graph
 		},
 
 		getPost: function(id) {
@@ -37,8 +37,6 @@ define([
 
 		initialize: function() {
 			Backbone.history.start();
-
-			console.log('mooooo');
 		}
 	});
 
