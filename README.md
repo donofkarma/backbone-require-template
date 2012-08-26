@@ -20,6 +20,8 @@ This template uses (all included):
 To-do
 ---------------------
 
+- Add test views for router
+- Add main view for homepage
 - Template overview
 - Usage instructions
 
