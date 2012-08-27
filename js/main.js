@@ -2,7 +2,7 @@
 * Backbone.js/RequireJS Template
 *
 * @info		Initialises the app
-* @version	0.2
+* @version	0.3
 * @author	Jasal Vadgama - http://blacklabelcreative.com/
 * @require	jQuery 1.8.0
 			underscore 1.3.3

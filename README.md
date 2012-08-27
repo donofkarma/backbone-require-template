@@ -20,13 +20,14 @@ This template uses (all included):
 To-do
 ---------------------
 
-- Add test views for router
-- Add main view for homepage
 - Template overview
 - Usage instructions
 
 Changelog
 ---------------------
+
+### 0.3
+- Added main template for app homepage
 
 ### 0.2
 - Added a router
