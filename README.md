@@ -20,6 +20,8 @@ This template uses (all included):
 To-do
 ---------------------
 
+- Add appcache
+- Add items from html-css-js-template
 - Template overview
 - Usage instructions
 
