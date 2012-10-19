@@ -22,11 +22,15 @@ To-do
 
 - Add appcache
 - Add items from html-css-js-template
+- Add grunt.js
 - Template overview
 - Usage instructions
 
 Changelog
 ---------------------
+
+### 0.4
+- Moved css, js and images to assets folder
 
 ### 0.3
 - Added main template for app homepage
