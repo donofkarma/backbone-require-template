@@ -8,20 +8,18 @@
 **/
 
 define([
-	// these are path alias that we configured in our bootstrap
-	'jQuery', // libs/jquery/jquery
-	'Underscore', // libs/underscore/underscore
-	'Backbone', // libs/backbone/backbone
+	// add global app dependency
+	'../app', // App
 
 	// additional module dependencies
 	'collections/collection', // Collection
 
 	// module templates
 	'text!../../templates/collection/template.html' // Template
-], function($, _, Backbone, Collection, Template) {
+], function(App, Collection, Template) {
 	var View = Backbone.View.extend({
-			// set the taget element for the view
-			el: $('#view'),
+			// set the target element for the view
+			el: '#view',
 
 			// template for the view - can also be reference directly in render()
 			template: Template,
@@ -53,10 +51,8 @@ define([
 
 			// render
 			render: function() {
-				var $el = $(this.el);
-
 				// apply the template to the models and show on the page
-				$el.html(_.template( this.template, { models: Collection.models } ));
+				this.$el.html(_.template( this.template, { models: Collection.models } ));
 
 				// return to maintiain chainability
 				return this;

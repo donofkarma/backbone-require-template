@@ -8,20 +8,18 @@
 **/
 
 define([
-	// these are path alias that we configured in our bootstrap
-	'jQuery', // libs/jquery/jquery
-	'Underscore', // libs/underscore/underscore
-	'Backbone', // libs/backbone/backbone
+	// add global app dependency
+	'app', // App
 
 	// additional module dependencies
 	'views/view', // View
 
 	// module templates
 	'text!../../templates/view/main.html' // Template
-], function($, _, Backbone, View, MainTemplate) {
+], function(App, View, MainTemplate) {
 	var AppView = Backbone.View.extend({
 			// set the taget element for the view
-			el: $('#app'),
+			el: '#app',
 
 			// bind any events
 			events: {
@@ -34,17 +32,16 @@ define([
 			initialize: function() {
 				var Views;
 
+				// render main view
+				this.render();
+
 				// init a view
 				Views = new View();
-
-				this.render();
 			},
 
 			// render
 			render: function() {
-				$el = $(this.el);
-
-				$el.html(_.template( MainTemplate, {} ));
+				this.$el.html(_.template( MainTemplate, {} ));
 			}
 		});
 

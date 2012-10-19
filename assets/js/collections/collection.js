@@ -8,13 +8,12 @@
 **/
 
 define([
-	// these are path alias that we configured in our bootstrap
-	'Underscore', // libs/underscore/underscore
-	'Backbone', // libs/backbone/backbone
+	// add global app dependency
+	'app', // App
 
 	// additional module dependencies
 	'models/model' // Model
-], function(_, Backbone, Model) {
+], function(App, Model) {
 	var collection = Backbone.Collection.extend({
 			// model to use for the collection
 			model: Model

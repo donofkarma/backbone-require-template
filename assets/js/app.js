@@ -10,29 +10,25 @@
 define([
 	// these are path alias that we configured in our bootstrap
 	'jQuery', // libs/jquery/jquery
+	'Underscore', // libs/underscore/underscore
+	'Backbone' // libs/backbone/backbone
 
 	// additional module dependencies
-	'router', // AppRouter
-	'views/app-view' // AppView
-], function($, AppRouter, AppView) {
+], function($, _, Backbone) {
 	// set up the interactions for the app seprerate from backbone
+
+	// global app object to hold settings
+	var app = {
+		root: '/'
+	};
 
 	// PRIVATE VARIABLES
 
 	// PRIVATE FUNCTIONS
 
-	// PUBLIC FUNCTIONS
 	// what we return here will be used by other modules
-	return {
-		initialize: function() {
-			// main app init
-			var Router, App;
-
-			// start the router
-			Router = new AppRouter();
-
-			// init the main app view
-			App = new AppView();
-		}
-	};
+	// app is also extended with Backbone.Events
+	return _.extend(app, {
+		// GLOBAL FUNCTIONS
+	}, Backbone.Events);
 });

@@ -31,6 +31,7 @@ Changelog
 
 ### 0.4
 - Moved css, js and images to assets folder
+- Removed un-needed library definitions
 
 ### 0.3
 - Added main template for app homepage

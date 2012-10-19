@@ -37,10 +37,21 @@ require.config({
 
 require([
 	// load the app module (app.js) and pass it to the definition function
-	'app' // App
-], function(App) {
+	'app', // App
+	'router' // Router
+], function(App, Router) {
 	// the "app" dependency is passed in as "App"
 
 	// initialze the application view
-	App.initialize();
+	App.router = new Router();
+
+	// start the HTML5 History API
+	Backbone.history.start();
+
+	// trigger the initial route and enable HTML5 History API support, set the root folder to '/' by default
+	// change in app.js if needed
+	/*Backbone.history.start({
+		pushState: true,
+		root: app.root
+	});*/
 });

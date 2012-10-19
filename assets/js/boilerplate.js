@@ -8,13 +8,11 @@
 **/
 
 define([
-	// these are path alias that we configured in our bootstrap
-	'jQuery', // libs/jquery/jquery
-	'Underscore', // libs/underscore/underscore
-	'Backbone' // libs/backbone/backbone
+	// add global app dependency
+	'app' // App
 
 	// additional module dependencies
-], function($, _, Backbone) {
+], function(App) {
 	var Module = {};
 
 	// what we return here will be used by other modules

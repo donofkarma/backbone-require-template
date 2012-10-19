@@ -8,10 +8,11 @@
 **/
 
 define([
-	// these are path alias that we configured in our bootstrap
-	'Underscore', // libs/underscore/underscore
-	'Backbone' // libs/backbone/backbone
-], function(_, Backbone) {
+	// add global app dependency
+	'app' // App
+
+	// additional module dependencies
+], function(App) {
 	var model = Backbone.Model.extend({
 			defaults: function() {
 				return {

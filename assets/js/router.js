@@ -8,19 +8,24 @@
 **/
 
 define([
-	// these are path alias that we configured in our bootstrap
-	'jQuery', // libs/jquery/jquery
-	'Underscore', // libs/underscore/underscore
-	'Backbone' // libs/backbone/backbone
+	// add global app dependency
+	'app', // App
 
 	// additional module dependencies
-], function($, _, Backbone) {
+	'views/app-view' // AppView
+], function(App, AppView) {
 	var AppRouter = Backbone.Router.extend({
 		routes: {
 			// define the URL routes (examples of each type)
-			"posts/:id": "getPost", // http://example.com/#/posts/121
-			"download/*path": "downloadFile", // http://example.com/#/download/user/images/hey.gif
-			":route/:action": "loadView" // http://example.com/#/dashboard/graph
+			'': 'index', // http://example.com/
+			'posts/:id': 'getPost', // http://example.com/#/posts/121
+			'download/*path': 'downloadFile', // http://example.com/#/download/user/images/hey.gif
+			':route/:action': 'loadView' // http://example.com/#/dashboard/graph
+		},
+
+		index: function() {
+			// init the main app view
+			var home = new AppView();
 		},
 
 		getPost: function(id) {
@@ -36,7 +41,6 @@ define([
 		},
 
 		initialize: function() {
-			Backbone.history.start();
 		}
 	});
 
