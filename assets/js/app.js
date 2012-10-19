@@ -10,7 +10,7 @@
 define([
 	// these are path alias that we configured in our bootstrap
 	'jQuery', // libs/jquery/jquery
-	'Underscore', // libs/underscore/underscore
+	'lodash', // libs/lodash/lodash.underscore.min
 	'Backbone' // libs/backbone/backbone
 
 	// additional module dependencies

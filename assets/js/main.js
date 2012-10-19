@@ -16,7 +16,7 @@ require.config({
 	paths: {
 		// paths to libraries
 		jQuery: 'libs/jquery/jquery-1.8.0.min',
-		Underscore: 'libs/underscore/underscore.min',
+		lodash: 'libs/lodash/lodash.underscore.min',
 		Backbone: 'libs/backbone/backbone.min',
 		text: 'libs/require/text' // text plugin for templates
 	},
@@ -25,11 +25,11 @@ require.config({
 		'jQuery': {
 			exports: '$'
 		},
-		'Underscore': {
+		'lodash': {
 			exports: '_'
 		},
 		'Backbone': {
-			deps: ['Underscore', 'jQuery'],
+			deps: ['lodash', 'jQuery'],
 			exports: 'Backbone'
 		}
 	}
