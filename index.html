@@ -2,14 +2,22 @@
 <!--[if lt IE 7]> <html lang="en-gb" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>    <html lang="en-gb" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>    <html lang="en-gb" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en-gb" class="noJS"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-gb" class="no-js"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
 
 	<title>Backbone.js/RequireJS Template</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+		// set js enabled class
+		document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1' + 'js' + '$2');
+	</script>
 
+	<!-- browser settings -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+
+	<!-- stylesheets -->
 	<link href="assets/css/reset.css" rel="stylesheet" />
 	<link href="assets/css/style.css" rel="stylesheet" />
 
