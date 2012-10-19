@@ -2,7 +2,7 @@
 * Backbone.js/RequireJS Template
 *
 * @info		Template for creating new mobules
-* @version	0.3
+* @version	0.4
 * @author	Jasal Vadgama - http://blacklabelcreative.com/
 * @license	MIT
 **/

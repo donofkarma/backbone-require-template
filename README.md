@@ -15,7 +15,7 @@ This template uses (all included):
 - jQuery v1.8.0
 - RequireJS 2.0.2
 - RequireJS text 2.0.0
-- Underscore.js 1.3.3
+- Lo-Dash 0.8.2
 
 To-do
 ---------------------
@@ -32,6 +32,7 @@ Changelog
 ### 0.4
 - Moved css, js and images to assets folder
 - Removed un-needed library definitions
+- Replaced Underscore with lodash
 
 ### 0.3
 - Added main template for app homepage

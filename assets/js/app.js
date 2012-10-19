@@ -2,7 +2,7 @@
 * Backbone.js/RequireJS Template
 *
 * @info		App initialization module
-* @version	0.3
+* @version	0.4
 * @author	Jasal Vadgama - http://blacklabelcreative.com/
 * @license	MIT
 **/

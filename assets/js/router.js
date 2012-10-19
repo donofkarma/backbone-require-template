@@ -2,7 +2,7 @@
 * Backbone.js/RequireJS Template
 *
 * @info		Router module
-* @version	0.3
+* @version	0.4
 * @author	Jasal Vadgama - http://blacklabelcreative.com/
 * @license	MIT
 **/
