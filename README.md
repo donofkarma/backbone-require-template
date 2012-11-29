@@ -17,17 +17,33 @@ This template uses (all included):
 - RequireJS text 2.0.0
 - Lo-Dash 0.8.2
 
+Tools
+---------------------
+
+This template uses nodejs to execute concatenation (r.js for JavaScript), minification (r.js for JavaScript), linting and unit testing (Jasmine v1.3.0). The following node modules are included:
+- gruntjs v0.3.17
+- grunt-contrib-requirejs v0.3.3
+- grunt-css v0.3.2
+- grunt-jasmine-runner v0.6.0 (requires PhantomJS)
+
 To-do
 ---------------------
 
-- Add appcache
+- Get Jasmine to run via grunt.js
+- Add package.json
+- Add AppCache
 - Add items from html-css-js-template
-- Add grunt.js
 - Template overview
 - Usage instructions
 
 Changelog
 ---------------------
+
+### 0.5
+- Added grunt.js
+- Added r.js optimisation via grunt.js
+- Added Jasmine TDD framework
+- .gitignore file update
 
 ### 0.4
 - Moved css, js and images to assets folder

@@ -14,7 +14,7 @@ define([
 	// additional module dependencies
 	'models/model' // Model
 ], function(App, Model) {
-	var collection = Backbone.Collection.extend({
+	var Collection = Backbone.Collection.extend({
 			// model to use for the collection
 			model: Model
 
@@ -29,5 +29,5 @@ define([
 		});
 
 	// what we return here will be used by other modules
-	return new collection();
+	return new Collection();
 });
