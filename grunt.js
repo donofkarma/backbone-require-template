@@ -3,7 +3,6 @@
 module.exports = function(grunt) {
 	// load any module dependcies
 	grunt.loadNpmTasks('grunt-css');
-	grunt.loadNpmTasks('grunt-jasmine-runner');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 
 	// Project configuration.
@@ -18,43 +17,6 @@ module.exports = function(grunt) {
 				'* @author	Jasal Vadgama - http://blacklabelcreative.com/\n' +
 				'* @license	MIT\n' +
 				'**/\n'
-		},
-		lint: {
-			files: [
-				'grunt.js',
-				'assets/js/*.js',
-				'assets/js/collections/**/*.js',
-				'assets/js/models/**/*.js',
-				'assets/js/views/**/*.js'
-			]
-		},
-		jasmine : {
-			amd: true,
-			helpers: [
-				'assets/js/libs/require/require.js',
-				'assets/js/main.js'
-			],
-			specs : 'test/spec/**/*_spec.js'
-		},
-		requirejs: {
-			compile: {
-				options: {
-					baseUrl: "assets/js",
-					mainConfigFile: "assets/js/main.js",
-					out: "dist/assets/js/optimized.js",
-					name: 'main'
-				}
-			}
-		},
-		cssmin: {
-			reset: {
-				src: ['<banner:meta.css_banner>', 'assets/css/reset.css'],
-				dest: 'dist/assets/css/reset.min.css'
-			},
-			style: {
-				src: ['<banner:meta.css_banner>', 'assets/css/style.css'],
-				dest: 'dist/assets/css/style.min.css'
-			}
 		},
 		jshint: {
 			options: {
@@ -84,11 +46,42 @@ module.exports = function(grunt) {
 				alert: true,
 				console: true
 			}
+		},
+		lint: {
+			files: [
+				'grunt.js',
+				'assets/js/*.js',
+				'assets/js/collections/**/*.js',
+				'assets/js/models/**/*.js',
+				'assets/js/views/**/*.js'
+			]
+		},
+		requirejs: {
+			compile: {
+				options: {
+					baseUrl: "assets/js",
+					mainConfigFile: "assets/js/main.js",
+					out: "dist/assets/js/script.min.js",
+					name: 'main'
+				}
+			}
+		},
+		cssmin: {
+			reset: {
+				src: ['<banner:meta.css_banner>', 'assets/css/reset.css'],
+				dest: 'dist/assets/css/reset.min.css'
+			},
+			style: {
+				src: ['<banner:meta.css_banner>', 'assets/css/style.css'],
+				dest: 'dist/assets/css/style.min.css'
+			}
 		}
 	});
 
-	// Default task.
+	// run the tests only
+	grunt.registerTask('test', 'lint');
+	// run the concatenation and minification only
 	grunt.registerTask('deploy', 'requirejs cssmin');
-	grunt.registerTask('test', 'lint jasmine');
-	grunt.registerTask('default', 'lint jasmine requirejs cssmin');
+	// default task - run it all
+	grunt.registerTask('default', 'lint requirejs cssmin');
 };

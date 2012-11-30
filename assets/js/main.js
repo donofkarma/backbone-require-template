@@ -13,6 +13,7 @@
 
 /* Configure shortcut aliases for required libraries */
 require.config({
+	baseUrl: '/assets/js',
 	paths: {
 		// paths to libraries
 		jQuery: 'libs/jquery/jquery-1.8.0.min',
