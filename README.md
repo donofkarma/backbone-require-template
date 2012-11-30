@@ -24,12 +24,11 @@ This template uses nodejs to execute concatenation (r.js for JavaScript), minifi
 - gruntjs v0.3.17
 - grunt-contrib-requirejs v0.3.3
 - grunt-css v0.3.2
-- grunt-jasmine-runner v0.6.0 (requires PhantomJS)
+- grunt-jasmine-task v0.2.3 (requires PhantomJS)
 
 To-do
 ---------------------
 
-- Get Jasmine to run via grunt.js
 - Add package.json
 - Add AppCache
 - Add items from html-css-js-template
@@ -42,7 +41,7 @@ Changelog
 ### 0.5
 - Added grunt.js
 - Added r.js optimisation via grunt.js
-- Added Jasmine TDD framework
+- Added Jasmine TDD framework - executing visually and via grunt.js
 - .gitignore file update
 
 ### 0.4

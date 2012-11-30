@@ -12,8 +12,8 @@ define([
 	'app' // App
 
 	// additional module dependencies
-], function(App) {
-	var model = Backbone.Model.extend({
+], function() {
+	var Model = Backbone.Model.extend({
 			defaults: function() {
 				return {
 					title: 'empty model'
@@ -31,5 +31,5 @@ define([
 		});
 
 	// what we return here will be used by other modules
-	return model;
+	return Model;
 });

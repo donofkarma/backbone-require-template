@@ -4,6 +4,7 @@ module.exports = function(grunt) {
 	// load any module dependcies
 	grunt.loadNpmTasks('grunt-css');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
+	grunt.loadNpmTasks('grunt-jasmine-task');
 
 	// Project configuration.
 	grunt.initConfig({
@@ -55,6 +56,9 @@ module.exports = function(grunt) {
 				'assets/js/models/**/*.js',
 				'assets/js/views/**/*.js'
 			]
+		},
+		jasmine: {
+			all: ['test/index.html']
 		},
 		requirejs: {
 			compile: {

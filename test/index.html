@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8"/>
+	<title>Jasmine Test Runner</title>
+
+	<link rel="stylesheet" href="lib/jasmine-1.3.0/jasmine.css">
+
+	<script src="lib/jasmine-1.3.0/jasmine.js"></script>
+	<script src="lib/jasmine-1.3.0/jasmine-html.js"></script>
+	<script>
+		var require = {
+			paths: {
+				// paths to libraries
+				jQuery: '../assets/js/libs/jquery/jquery-1.8.0.min',
+				lodash: '../assets/js/libs/lodash/lodash.underscore.min',
+				Backbone: '../assets/js/libs/backbone/backbone.min',
+				text: '../assets/js/libs/require/text', // text plugin for templates
+
+				// code locations
+				app: '../assets/js/app',
+				models: '../assets/js/models'
+			},
+			shim: {
+				// set dependencies for imported scipts
+				'jQuery': {
+					exports: '$'
+				},
+				'lodash': {
+					exports: '_'
+				},
+				'Backbone': {
+					deps: ['lodash', 'jQuery'],
+					exports: 'Backbone'
+				}
+			}
+		};
+	</script>
+	<script src="../assets/js/libs/require/require.js"></script>
+</head>
+<body>
+
+<script>
+	require([
+		'spec/model_spec'
+	], function() {
+		jasmine.getEnv().addReporter(new jasmine.HtmlReporter());
+		jasmine.getEnv().execute();
+	});
+</script>
+
+</body>
+</html>
