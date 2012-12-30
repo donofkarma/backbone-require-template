@@ -2,6 +2,7 @@
 
 module.exports = function(grunt) {
 	// load any module dependcies
+	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-css');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-jasmine-task');
@@ -70,6 +71,16 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		sass: {
+			dev: {
+				files: {
+					'assets/css/style.css': 'assets/css/style.scss',
+					'assets/css/style_small.css': 'assets/css/style_small.scss',
+					'assets/css/style_medium.css': 'assets/css/style_medium.scss',
+					'assets/css/style_large.css': 'assets/css/style_large.scss'
+				}
+			}
+		},
 		cssmin: {
 			reset: {
 				src: ['<banner:meta.css_banner>', 'assets/css/reset.css'],
@@ -79,13 +90,24 @@ module.exports = function(grunt) {
 				src: ['<banner:meta.css_banner>', 'assets/css/style.css'],
 				dest: 'dist/assets/css/style.min.css'
 			}
+		},
+		watch: {
+			sass: {
+				files: [
+					'assets/css/style.scss',
+					'assets/css/style_small.scss',
+					'assets/css/style_medium.scss',
+					'assets/css/style_large.scss'
+				],
+				tasks: 'sass'
+			}
 		}
 	});
 
 	// run the tests only
-	grunt.registerTask('test', 'lint');
+	grunt.registerTask('test', 'lint jasmine');
 	// run the concatenation and minification only
 	grunt.registerTask('deploy', 'requirejs cssmin');
 	// default task - run it all
-	grunt.registerTask('default', 'lint requirejs cssmin');
+	grunt.registerTask('default', 'lint jasmine requirejs sass cssmin');
 };

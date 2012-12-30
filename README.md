@@ -29,7 +29,6 @@ This template uses nodejs to execute concatenation (r.js for JavaScript), minifi
 To-do
 ---------------------
 
-- Add package.json
 - Add AppCache
 - Add items from html-css-js-template
 - Template overview
