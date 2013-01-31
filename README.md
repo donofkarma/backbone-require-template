@@ -17,15 +17,6 @@ This template uses (all included):
 - RequireJS text 2.0.0
 - Lo-Dash 0.8.2
 
-Tools
----------------------
-
-This template uses nodejs to execute concatenation (r.js for JavaScript), minification (r.js for JavaScript), linting and unit testing (Jasmine v1.3.0). The following node modules are included:
-- gruntjs v0.3.17
-- grunt-contrib-requirejs v0.3.3
-- grunt-css v0.3.2
-- grunt-jasmine-task v0.2.3 (requires PhantomJS)
-
 To-do
 ---------------------
 
@@ -37,31 +28,37 @@ To-do
 Changelog
 ---------------------
 
-### 0.5
+### 0.2.0
+- Updating grunt to the latest release candidate
+- Re-structuring css/scss files
+- Adding LICENSE-MIT
+- Adding package.json file
+
+### 0.1.5
 - Added grunt.js
 - Added r.js optimisation via grunt.js
 - Added Jasmine TDD framework - executing visually and via grunt.js
 - .gitignore file update
 
-### 0.4
+### 0.1.4
 - Moved css, js and images to assets folder
 - Removed un-needed library definitions
 - Replaced Underscore with lodash
 
-### 0.3
+### 0.1.3
 - Added main template for app homepage
 
-### 0.2
+### 0.1.2
 - Added a router
 - Added explanitory index.html
 - Added some basic styling
 - Added exmaple functionality
 
-### 0.1
+### 0.1.0
 - Added App.initialize() layer to init additional JS plugins outside of the Backbone framework (e.g. carousels and accordions)
 - Adding initial code
 
 License
 ---------------------
 
-This work may be freely distributed under the MIT license.
+MIT: [https://github.com/donofkarma/backbone-require-template/blob/master/LICENSE-MIT](https://github.com/donofkarma/backbone-require-template/blob/master/LICENSE-MIT)

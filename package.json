@@ -1,0 +1,36 @@
+{
+  "name": "backbone-require-template",
+  "description": "A template to build backbone apps from.",
+  "version": "0.1.5",
+  "author": "Jasal Vadgama - http://blacklabelcreative.com/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/donofkarma/backbone-require-template.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/donofkarma/backbone-require-template/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "/",
+  "scripts": {
+    "test": "grunt test",
+    "deploy": "grunt deploy",
+    "all": "grunt"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-concat": "0.1.2rc6",
+    "grunt-contrib-jasmine": "0.3.0rc7",
+    "grunt-contrib-jshint": "0.1.1rc6",
+    "grunt-contrib-mincss": "0.4.0rc7",
+    "grunt-contrib-requirejs": "0.4.0rc7",
+    "grunt-contrib-sass": "0.2.2rc7",
+    "grunt-contrib-uglify": "0.1.1rc6",
+    "grunt-contrib-watch": "0.2.0rc7"
+  }
+}

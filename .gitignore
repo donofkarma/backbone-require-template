@@ -31,5 +31,6 @@ Thumbs.db
 # Project files #
 #################
 .bin/
-_SpecRunner.html
+.grunt/
+.sass-cache/
 dist/
