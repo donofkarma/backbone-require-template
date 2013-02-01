@@ -1,0 +1,48 @@
+/**
+* Backbone.js/RequireJS Template
+*
+* @version	0.4
+* @author	Jasal Vadgama - http://blacklabelcreative.com/
+* @license	GPL v3
+**/
+/**
+* General
+**/
+body {
+  color: #121212;
+  font: 14px/1.2em Helvetica, Arial, sans-serif; }
+
+section {
+  margin-bottom: 2em; }
+
+h1 {
+  margin-bottom: 1em;
+  font-size: 26px;
+  line-height: 1.2em; }
+
+h2 {
+  margin-bottom: 0.5em;
+  font-size: 20px;
+  line-height: 1.2em; }
+
+h3 {
+  margin-bottom: 0.5em; }
+
+p,
+ul {
+  margin-bottom: 1em; }
+
+li {
+  margin: 0 0 5px 40px; }
+
+/**
+* Containers
+**/
+#pageWrapper {
+  margin: 1em auto 0;
+  width: 960px; }
+
+#app {
+  padding: 20px;
+  background: #dfdfdf;
+  border: 1px dashed #333333; }

@@ -1,12 +1,6 @@
 /*global module:false*/
 
 module.exports = function(grunt) {
-	// load any module dependcies
-	grunt.loadNpmTasks('grunt-sass');
-	grunt.loadNpmTasks('grunt-css');
-	grunt.loadNpmTasks('grunt-contrib-requirejs');
-	grunt.loadNpmTasks('grunt-jasmine-task');
-
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -31,21 +25,21 @@ module.exports = function(grunt) {
 				undef: true,
 				boss: true,
 				eqnull: true,
-				browser: true
-			},
-			globals: {
-				// RequireJS
-				define: true,
-				require: true,
-				// lodash
-				_: true,
-				// BackboneJS
-				Backbone: true,
-				// jQuery
-				jQuery: true,
-				// extras
-				alert: true,
-				console: true
+				browser: true,
+				globals: {
+					// RequireJS
+					define: true,
+					require: true,
+					// lodash
+					_: true,
+					// BackboneJS
+					Backbone: true,
+					// jQuery
+					jQuery: true,
+					// extras
+					alert: true,
+					console: true
+				}
 			},
 			all: [
 				'Gruntfile.js',
@@ -56,7 +50,13 @@ module.exports = function(grunt) {
 			]
 		},
 		jasmine: {
-			all: ['test/index.html']
+			tests: {
+				src: 'assets/js/**/*.js',
+				options: {
+					specs: 'test/spec/**/*_spec.js',
+					helpers: 'test/spec/**/*_helper.js'
+				}
+			}
 		},
 		requirejs: {
 			compile: {
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		cssmin: {
+		mincss: {
 			reset: {
 				src: ['assets/css/reset.css'],
 				dest: 'deploy/assets/css/reset.css'
@@ -97,10 +97,19 @@ module.exports = function(grunt) {
 		}
 	});
 
-	// run the tests only
-	grunt.registerTask('test', 'lint jasmine');
-	// run the concatenation and minification only
-	grunt.registerTask('deploy', 'requirejs cssmin');
-	// default task - run it all
-	grunt.registerTask('default', 'lint jasmine requirejs sass cssmin');
+	// Load tasks
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-jasmine');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-mincss');
+	grunt.loadNpmTasks('grunt-contrib-requirejs');
+	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+
+	// Default task(s)
+	//grunt.registerTask('test', ['jasmine', 'jshint']);
+	//grunt.registerTask('deploy', ['requirejs', 'cssmin']);
+	//grunt.registerTask('default', ['sass', 'cssmin', 'jasmine', 'jshint', 'requirejs']);
+	grunt.registerTask('default', ['sass']);
 };
