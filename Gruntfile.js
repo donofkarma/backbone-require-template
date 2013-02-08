@@ -49,14 +49,6 @@ module.exports = function(grunt) {
 				'assets/js/views/**/*.js'
 			]
 		},
-		jasmine: {
-			tests: {
-				src: 'assets/js/models/**/*.js',
-				options: {
-					specs: 'test/spec/**/*_spec.js'
-				}
-			}
-		},
 		requirejs: {
 			compile: {
 				options: {
@@ -98,7 +90,6 @@ module.exports = function(grunt) {
 
 	// Load tasks
 	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-jasmine');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-mincss');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
