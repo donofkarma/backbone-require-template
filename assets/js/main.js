@@ -16,7 +16,7 @@ require.config({
 	baseUrl: '/assets/js',
 	paths: {
 		// paths to libraries
-		jQuery: 'libs/jquery/jquery-1.8.0.min',
+		jQuery: 'libs/jquery/jquery.min',
 		lodash: 'libs/lodash/lodash.underscore.min',
 		Backbone: 'libs/backbone/backbone.min',
 		text: 'libs/require/text' // text plugin for templates

@@ -62,7 +62,10 @@ module.exports = function(grunt) {
 		sass: {
 			dev: {
 				files: {
-					'assets/css/style.css': 'assets/scss/style.scss'
+					'assets/css/style.css': 'assets/scss/style.scss',
+					'assets/css/style_small.css': 'assets/scss/style_small.scss',
+					'assets/css/style_medium.css': 'assets/scss/style_medium.scss',
+					'assets/css/style_large.css': 'assets/scss/style_large.scss'
 				}
 			}
 		},
@@ -78,7 +81,7 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			sass: {
-				files: ['assets/css/*.scss'],
+				files: ['assets/scss/*.scss'],
 				tasks: 'sass'
 			},
 			lint: {
@@ -98,8 +101,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task(s)
-	//grunt.registerTask('test', ['jasmine', 'jshint']);
-	//grunt.registerTask('deploy', ['requirejs', 'cssmin']);
-	//grunt.registerTask('default', ['sass', 'cssmin', 'jasmine', 'jshint', 'requirejs']);
-	grunt.registerTask('default', ['sass']);
+	grunt.registerTask('test', ['jshint']);
+	grunt.registerTask('deploy', ['sass', 'mincss', 'requirejs']);
+	grunt.registerTask('default', ['sass', 'mincss', 'jshint', 'requirejs']);
 };

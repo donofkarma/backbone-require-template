@@ -11,11 +11,11 @@ Libraries
 ---------------------
 
 This template uses (all included):
-- Backbone.js 0.9.2
-- jQuery v1.8.0
-- RequireJS 2.0.2
-- RequireJS text 2.0.0
-- Lo-Dash 0.8.2
+- Backbone.js v0.9.10
+- jQuery v1.9.1
+- RequireJS v2.1.4
+- RequireJS text v2.0.0
+- Lo-Dash v1.0.1
 
 To-do
 ---------------------
@@ -27,6 +27,12 @@ To-do
 
 Changelog
 ---------------------
+
+### 0.2.1
+- Updating libraries to latest versions
+- Renaming jQuery library file for easier updates
+- Removing Jasmine tests due to define issues
+- Adding media queries and .scss from [https://github.com/donofkarma/html-css-js-template](html-css-js-template)
 
 ### 0.2.0
 - Updating grunt to the latest release candidate

@@ -17,11 +17,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
 
-	<!-- stylesheets -->
-	<link href="/assets/css/reset.css" rel="stylesheet" />
-	<link href="/assets/css/style.css" rel="stylesheet" />
+	<!-- site icons -->
+	<!--<link rel="shortcut icon" href="/assets/images/icons/favicon.ico" />
+	<link rel="apple-touch-icon" href="/assets/images/icons/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/images/icons/apple-touch-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/icons/apple-touch-icon-retina.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/icons/apple-touch-icon-ipad-retina.png" />-->
 
+	<!-- stylesheets -->
+	<link href="/assets/css/reset.css" media="screen" rel="stylesheet" />
+	<link href="/assets/css/style.css" media="screen" rel="stylesheet" />
+	<link href="/assets/css/style_small.css" media="screen and (min-width: 479px)" rel="stylesheet" />
+	<link href="/assets/css/style_medium.css" media="screen and (min-width: 767px)" rel="stylesheet" />
+	<link href="/assets/css/style_large.css" media="screen and (min-width: 959px)" rel="stylesheet" />
+	<!-- add all stylesheets and html5shim to <IE9 -->
 	<!--[if lt IE 9]>
+		<link href="/assets/css/style_small.css" media="screen" rel="stylesheet" />
+		<link href="/assets/css/style_medium.css" media="screen" rel="stylesheet" />
+		<link href="/assets/css/style_large.css" media="screen" rel="stylesheet" />
+
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>

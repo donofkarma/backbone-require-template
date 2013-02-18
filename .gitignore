@@ -33,6 +33,7 @@ Thumbs.db
 .bin/
 .grunt/
 .sass-cache/
+assets/css/style*.css
 deploy/
 dist/
 node_modules/
