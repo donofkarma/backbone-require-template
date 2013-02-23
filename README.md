@@ -28,6 +28,9 @@ To-do
 Changelog
 ---------------------
 
+### 0.2.2
+- Updating to final releases for GruntJS 0.4.0
+
 ### 0.2.1
 - Updating libraries to latest versions
 - Renaming jQuery library file for easier updates

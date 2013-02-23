@@ -69,7 +69,7 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		mincss: {
+		cssmin: {
 			reset: {
 				src: ['assets/css/reset.css'],
 				dest: 'deploy/assets/css/reset.css'
@@ -94,7 +94,7 @@ module.exports = function(grunt) {
 	// Load tasks
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-mincss');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -102,6 +102,6 @@ module.exports = function(grunt) {
 
 	// Default task(s)
 	grunt.registerTask('test', ['jshint']);
-	grunt.registerTask('deploy', ['sass', 'mincss', 'requirejs']);
-	grunt.registerTask('default', ['sass', 'mincss', 'jshint', 'requirejs']);
+	grunt.registerTask('deploy', ['sass', 'cssmin', 'requirejs']);
+	grunt.registerTask('default', ['sass', 'cssmin', 'jshint', 'requirejs']);
 };
