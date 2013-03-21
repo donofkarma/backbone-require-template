@@ -3,6 +3,9 @@ Changelog
 
 ### 0.3.0
 - Updating to latest version of Backbone.js
+- Moving source CSS and JS files to /src/
+- Updating grunt tasks for new paths
+- Adding file copy to ensure RequireJS is pulled into the assets folder
 
 ### 0.2.2
 - Updating to final releases for GruntJS 0.4.0
