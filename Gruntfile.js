@@ -43,45 +43,56 @@ module.exports = function(grunt) {
 			},
 			all: [
 				'Gruntfile.js',
-				'assets/js/*.js',
-				'assets/js/collections/**/*.js',
-				'assets/js/models/**/*.js',
-				'assets/js/views/**/*.js'
+				'src/js/*.js',
+				'src/js/collections/**/*.js',
+				'src/js/models/**/*.js',
+				'src/js/views/**/*.js'
 			]
 		},
 		requirejs: {
 			compile: {
 				options: {
-					baseUrl: "assets/js",
-					mainConfigFile: "assets/js/main.js",
-					out: "deploy/assets/js/script.min.js",
-					name: 'main'
+					baseUrl: "src/js",
+					mainConfigFile: "src/js/main.js",
+					name: 'main',
+					out: "assets/js/script.min.js",
+					preserveLicenseComments: false
 				}
+			}
+		},
+		copy: {
+			main: {
+				files: [
+					{
+						src: ['src/js/libs/require/require.js'],
+						dest: 'assets/js/libs/require/require.js'
+					}
+				]
 			}
 		},
 		sass: {
 			dev: {
 				files: {
-					'assets/css/style.css': 'assets/scss/style.scss',
-					'assets/css/style_small.css': 'assets/scss/style_small.scss',
-					'assets/css/style_medium.css': 'assets/scss/style_medium.scss',
-					'assets/css/style_large.css': 'assets/scss/style_large.scss'
+					'assets/css/style.css': 'src/sass/style.scss',
+					'assets/css/ie.css' : [
+						'src/sass/style_small.scss',
+						'src/sass/style_medium.scss',
+						'src/sass/style_large.scss'
+					]
 				}
 			}
 		},
 		cssmin: {
-			reset: {
-				src: ['assets/css/reset.css'],
-				dest: 'deploy/assets/css/reset.css'
-			},
-			style: {
-				src: ['assets/css/style.css'],
-				dest: 'deploy/assets/css/style.css'
+			compress: {
+				files: {
+					'assets/css/style.min.css': ['assets/css/style.css'],
+					'assets/css/ie.min.css': ['assets/css/ie.css']
+				}
 			}
 		},
 		watch: {
 			sass: {
-				files: ['assets/scss/*.scss'],
+				files: ['src/scss/*.scss'],
 				tasks: 'sass'
 			},
 			lint: {
@@ -93,6 +104,7 @@ module.exports = function(grunt) {
 
 	// Load tasks
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
@@ -102,6 +114,6 @@ module.exports = function(grunt) {
 
 	// Default task(s)
 	grunt.registerTask('test', ['jshint']);
-	grunt.registerTask('deploy', ['sass', 'cssmin', 'requirejs']);
-	grunt.registerTask('default', ['sass', 'cssmin', 'jshint', 'requirejs']);
+	grunt.registerTask('deploy', ['sass', 'cssmin', 'requirejs', 'copy']);
+	grunt.registerTask('default', ['sass', 'cssmin', 'jshint', 'requirejs', 'copy']);
 };
