@@ -6,6 +6,7 @@ Changelog
 - Moving source CSS and JS files to /src/
 - Updating grunt tasks for new paths
 - Adding file copy to ensure RequireJS is pulled into the assets folder
+- Updating node.js and grunt tasks to latest
 
 ### 0.2.2
 - Updating to final releases for GruntJS 0.4.0
