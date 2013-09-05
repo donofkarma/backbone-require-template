@@ -9,18 +9,18 @@
 	<title>Backbone.js/RequireJS Template</title>
 
 	<script>
-		// set js enabled class
+		// set js enabled class - replaces 'no-js' with 'js'
 		document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1' + 'js' + '$2');
 	</script>
 
 	<!-- browser settings -->
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
 
 	<!-- site icons -->
 	<!--<link rel="shortcut icon" href="/assets/images/icons/favicon.ico" />
 	<link rel="apple-touch-icon" href="/assets/images/icons/apple-touch-icon.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="assets/images/icons/apple-touch-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/icons/apple-touch-icon-ipad.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/icons/apple-touch-icon-retina.png" />
 	<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/icons/apple-touch-icon-ipad-retina.png" />-->
 
@@ -33,25 +33,3 @@
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
-<body>
-	<div id="pageWrapper">
-		<header id="header">
-			<h1>Backbone.js/RequireJS Template</h1>
-		</header>
-
-		<section>
-			<ul>
-				<li>Some test data should populate below. There is no external source of data, an item is inserted into a collection within the View.initialize(). This was added to make sure all the model/collection/view and templating is working.</li>
-				<li>Everything has a generic name to keep it as flexible as possible.</li>
-			</ul>
-		</section>
-
-		<section id="app">
-			<p>Loading...</p>
-		</section>
-	</div>
-
-	<!-- Load the script "js/main.js" as our entry point -->
-	<script data-main="/assets/js/script.min" src="/assets/js/libs/require/require.js"></script>
-</body>
-</html>

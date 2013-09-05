@@ -4,15 +4,6 @@ module.exports = function(grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		meta: {
-			js_banner: '/**\n' +
-				'* <%= pkg.name %>\n' +
-				'*\n' +
-				'* @version	<%= pkg.version %>\n' +
-				'* @author	<%= pkg.author %>\n' +
-				'* @license	<%= pkg.licenses[0].type %> - <%= pkg.licenses[0].url %>\n' +
-				'**/\n'
-		},
 		jshint: {
 			options: {
 				curly: true,
@@ -103,13 +94,11 @@ module.exports = function(grunt) {
 	});
 
 	// Load tasks
-	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task(s)
