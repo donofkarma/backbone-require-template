@@ -28,6 +28,9 @@ app.configure(function() {
 	// simulates DELETE and PUT form methods
 	app.use(express.methodOverride());
 
+	// enable compression
+	app.use(express.compress());
+
 	// "app.router" positions our routes
 	// above the middleware defined below,
 	// this means that Express will attempt
