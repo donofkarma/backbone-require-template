@@ -1,7 +1,7 @@
 {
   "name": "backbone-require-template",
   "description": "A template to build backbone apps from.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": "Jasal Vadgama - http://blacklabelcreative.com/",
   "repository": {
     "type": "git",

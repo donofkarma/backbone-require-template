@@ -3,6 +3,7 @@ Changelog
 
 ### 0.4.0
 - Updating project wrapper to use express.js
+- Adding jasmine test examples - HTML
 
 ### 0.3.0
 - Updating to latest version of Backbone.js
