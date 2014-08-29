@@ -11,17 +11,15 @@ Libraries
 ---------------------
 
 This template uses (all included):
-- Backbone.js v1.0.0
-- jQuery v1.9.1
-- RequireJS v2.1.4
-- RequireJS text v2.0.0
-- Lo-Dash v1.0.1
+- Backbone.js v1.1.2
+- jQuery v1.11.1
+- RequireJS v2.1.14
+- RequireJS text v2.0.12
+- Lo-Dash v2.4.1
 
 To-do
 ---------------------
 
-- Add AppCache
-- Add items from html-css-js-template
 - Template overview
 - Usage instructions
 

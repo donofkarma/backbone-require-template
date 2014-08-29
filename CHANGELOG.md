@@ -1,6 +1,12 @@
 Changelog
 ---------------------
 
+### 0.4.0
+- Adding Express 4
+- Updating package versions
+- Updating library versions
+- Restructuring app layout
+
 ### 0.3.0
 - Updating to latest version of Backbone.js
 - Moving source CSS and JS files to /src/

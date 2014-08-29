@@ -1,72 +1,12 @@
-/**
-* Backbone.js/RequireJS Template
-*
-* @info		Basline styling
-* @version	0.2.1
-* @author	Jasal Vadgama - http://blacklabelcreative.com/
-**/
+// Global setup
+@import "_setup/variables";
+@import "_setup/mixins";
+@import "_setup/reset";
+@import "_setup/global";
+@import "_setup/grid";
 
-/**
-* Imports
-**/
-/** SASS **/
-@import 'src/sass/partials/_variables.scss';
-/** RESET **/
-@import 'src/sass/reset.scss';
+// Components
+@import "_components/header";
+@import "_components/footer";
 
-/**
-* General
-**/
-body {
-	color: #121212;
-	font: 14px/1.2em Helvetica, Arial, sans-serif;
-}
-section {
-	margin-bottom: $margin-bottom * 2;
-}
-h1 {
-	margin-bottom: $margin-bottom;
-	font-size: 26px;
-	line-height: 1.2em;
-}
-h2 {
-	margin-bottom: $margin-bottom / 2;
-	font-size: 20px;
-	line-height: 1.2em;
-}
-h3 {
-	margin-bottom: $margin-bottom / 2;
-}
-p,
-ul {
-	margin-bottom: $margin-bottom;
-}
-li {
-	margin: 0 0 5px 40px;
-}
-
-/**
-* Containers
-**/
-#pageWrapper {
-	margin: $margin-bottom auto 0;
-	width: 960px;
-}
-#app {
-	padding: 20px;
-	background: #dfdfdf;
-	border: 1px dashed #333;
-}
-
-/** SMALL SCREEN **/
-@media screen and (min-width: 479px) {
-	@import 'src/sass/style_small.scss';
-}
-/** MEDIUM SCREEN **/
-@media screen and (min-width: 767px) {
-	@import 'src/sass/style_medium.scss';
-}
-/** LARGE SCREEN **/
-@media screen and (min-width: 959px) {
-	@import 'src/sass/style_large.scss';
-}
+// Pages

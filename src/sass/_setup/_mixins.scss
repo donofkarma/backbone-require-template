@@ -1,0 +1,61 @@
+/**
+* Mixins
+**/
+
+@mixin modular-mq($breakpoint) {
+    // if it's not old IE
+    @if $isOldIE == false {
+        // add the correct media query
+        @if $breakpoint == small {
+            @media (screen and min-width: $smallScreen) { @content; }
+        }
+        @else if $breakpoint == medium {
+            @media (screen and min-width: $mediumScreen) { @content; }
+        }
+        @else if $breakpoint == large {
+            @media (screen and min-width: $largeScreen) { @content; }
+        }
+    }
+    @else {
+        // it's old IE
+        // add all the styles
+        @content;
+    }
+}
+
+// visually hide text
+@mixin visually-hidden {
+    position: absolute;
+    top: -999em;
+    left: -999em;
+}
+
+// cross browser opacity
+@mixin element-opacity($val) {
+    -moz-opacity: $val/100;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" +  $val + ")";
+    opacity: $val/100;
+}
+
+// transitions
+@mixin transition($transition-property, $transition-time, $easing) {
+    -webkit-transition: $transition-property $transition-time $easing;
+    transition: $transition-property $transition-time $easing;
+}
+
+// rotation
+@mixin rotate($degree) {
+    -ms-transform: rotate($degree);
+    -webkit-transform: rotate($degree);
+    -webkit-backface-visibility: hidden; /*Reduces jagged edges*/
+    transform: rotate($degree);
+}
+
+// linear gradients
+@mixin linear-gradient($fromColor, $toColor) {
+    background-color: $toColor; /* Fallback Color */
+    background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor));
+    background-image: -webkit-linear-gradient(top, $fromColor, $toColor);
+    background-image: linear-gradient(top, $fromColor, $toColor);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$fromColor', EndColorStr='$toColor');
+}

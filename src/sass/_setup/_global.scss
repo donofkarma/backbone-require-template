@@ -1,0 +1,28 @@
+/**
+* Global styles
+**/
+
+section {
+    margin-bottom: $gutter * 2;
+}
+h1 {
+    margin-bottom: $gutter;
+    font-size: 26px;
+    line-height: 1.2em;
+}
+h2 {
+    margin-bottom: $gutter / 2;
+    font-size: 20px;
+    line-height: 1.2em;
+}
+h3 {
+    margin-bottom: $gutter;
+}
+p,
+ul {
+    margin-bottom: $gutter;
+    list-style: disc;
+}
+li {
+    margin: 0 0 5px 40px;
+}

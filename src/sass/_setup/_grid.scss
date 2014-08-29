@@ -1,0 +1,19 @@
+/**
+* Wrappers and Grid
+**/
+
+body {
+    background: $white;
+    color: $grey_dark;
+    font: 14px/1.2em Arial, Helvetica, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+#pageWrapper {
+
+    @include modular-mq(large) {
+        margin: $gutter auto;
+        width: 960px;
+    }
+}
